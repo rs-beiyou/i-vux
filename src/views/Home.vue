@@ -18,4 +18,7 @@ export default {
 }
 </script>
 <style lang="less">
+.home {
+  color: @theme-color;
+}
 </style>
