@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.zjhcsoft.supplier" version="1.2.3"
+  xmlns="http://www.w3.org/ns/widgets"
+  xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>供应商响应</name>
+  <preference name="AndroidPersistentFileLocation" value="Internal" />
+  <preference name="AndroidPersistentFileLocation" value="Compatibility" />
+  <preference name="iosPersistentFileLocation" value="Library" />
+  <preference name="iosPersistentFileLocation" value="Compatibility" />
+  <preference name="android-build-tool" value="gradle" />
+  <preference name="Orientation" value="portrait" />
+  <preference name="ShowSplashScreenSpinner" value="false" />
+  <edit-config file="*-Info.plist" mode="merge" target="NSCameraUsageDescription">
+    <string>需要相机权限</string>
+  </edit-config>
+  <edit-config file="*-Info.plist" mode="merge" target="NSPhotoLibraryUsageDescription">
+    <string>需要相册权限</string>
+  </edit-config>
+  <edit-config file="*-Info.plist" mode="merge" target="NSPhotoLibraryAddUsageDescription">
+    <string>需要相册权限</string>
+  </edit-config>
+  <description>
+        A sample Apache Cordova application that responds to the deviceready event.
+  </description>
+  <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+  </author>
+  <content src="index.html" />
+  <plugin name="cordova-plugin-whitelist" spec="1" />
+  <access origin="*" />
+  <allow-intent href="http://*/*" />
+  <allow-intent href="https://*/*" />
+  <allow-intent href="tel:*" />
+  <allow-intent href="sms:*" />
+  <allow-intent href="mailto:*" />
+  <allow-intent href="geo:*" />
+  <platform name="android">
+    <config-file parent="/manifest" target="AndroidManifest.xml"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+      <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    </config-file>
+    <allow-intent href="market:*" />
+    <icon density="ldpi" src="res/icon/android/ldpi.png" />
+    <icon density="mdpi" src="res/icon/android/mdpi.png" />
+    <icon density="hdpi" src="res/icon/android/hdpi.png" />
+    <icon density="xhdpi" src="res/icon/android/xhdpi.png" />
+    <icon density="xxhdpi" src="res/icon/android/xxhdpi.png" />
+    <icon density="xxxhdpi" src="res/icon/android/xxxhdpi.png" />
+    <splash density="port-hdpi" src="res/screen/android/screen-hdpi-portrait.png" />
+    <splash density="port-ldpi" src="res/screen/android/screen-ldpi-portrait.png" />
+    <splash density="port-mdpi" src="res/screen/android/screen-mdpi-portrait.png" />
+    <splash density="port-xhdpi" src="res/screen/android/screen-xhdpi-portrait.png" />
+  </platform>
+  <platform name="ios">
+    <allow-intent href="itms:*" />
+    <allow-intent href="itms-apps:*" />
+    <icon height="20" src="res/icon/ios/icon-20.png" width="20" />
+    <icon height="29" src="res/icon/ios/icon-29.png" width="29" />
+    <icon height="40" src="res/icon/ios/icon-20@2x.png" width="40" />
+    <icon height="50" src="res/icon/ios/icon-50.png" width="50" />
+    <icon height="57" src="res/icon/ios/icon.png" width="57" />
+    <icon height="58" src="res/icon/ios/icon-29@2x.png" width="58" />
+    <icon height="60" src="res/icon/ios/icon-60.png" width="60" />
+    <icon height="72" src="res/icon/ios/icon-72.png" width="72" />
+    <icon height="76" src="res/icon/ios/icon-76.png" width="76" />
+    <icon height="80" src="res/icon/ios/icon-40@2x.png" width="80" />
+    <icon height="84" src="res/icon/ios/icon-84.png" width="84" />
+    <icon height="87" src="res/icon/ios/icon-29@3x.png" width="87" />
+    <icon height="100" src="res/icon/ios/icon-50@2x.png" width="100" />
+    <icon height="114" src="res/icon/ios/icon@2x.png" width="114" />
+    <icon height="120" src="res/icon/ios/icon-60@2x.png" width="120" />
+    <icon height="144" src="res/icon/ios/icon-72@2x.png" width="144" />
+    <icon height="152" src="res/icon/ios/icon-76@2x.png" width="152" />
+    <icon height="180" src="res/icon/ios/icon-60@3x.png" width="180" />
+    <splash height="480" src="res/screen/ios/Default-iphone.png" width="320" />
+    <splash height="960" src="res/screen/ios/Default@2x-iphone.png" width="640" />
+    <splash height="1136" src="res/screen/ios/Default-568h@2x-iphone.png" width="640" />
+    <splash height="1334" src="res/screen/ios/Default-667h.png" width="750" />
+    <splash height="2208" src="res/screen/ios/Default-736h.png" width="1242" />
+    <splash height="2436" src="res/screen/ios/Default-2436h.png" width="1125" />
+  </platform>
+  <plugin name="cordova-plugin-file" spec="^6.0.1" />
+  <plugin name="cordova-plugin-file-transfer" spec="^1.7.1" />
+  <plugin name="cordova-plugin-camera" spec="^4.0.3" />
+  <plugin name="cordova-plugin-splashscreen" spec="^5.0.2" />
+  <plugin name="cordova-plugin-badge" spec="^0.8.8" />
+  <plugin name="cordova-plugin-app-version" spec="^0.1.9" />
+  <plugin name="cordova-plugin-app-preferences" spec="^0.99.3" />
+  <plugin name="cordova-plugin-file-opener2" spec="^2.1.4">
+    <variable name="ANDROID_SUPPORT_V4_VERSION" value="27.+" />
+  </plugin>
+  <plugin name="call-number" spec="https://github.com/Rohfosho/CordovaCallNumberPlugin.git" />
+  <plugin name="cordova-plugin-device" spec="^2.0.2" />
+  <engine name="android" spec="^7.1.4" />
+  <engine name="ios" spec="^4.5.5" />
+</widget>
